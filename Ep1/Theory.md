@@ -26,8 +26,10 @@ Ans: React is just a 'React', `It react to the changes in state.
 Ans: react.development.js - It is used for delevopment purpose not in production and react.production.js - used in production purpose
 
 ● What is async and defer? - see my Youtube video ;) Coding 
-Ans:
+Ans: async - Download the script along with the html parshing and html parshing wait for the script to be executed. 
+It won't execute in order. It is used with the independent files.
 
+defer - It also download the script along with the html parsing and the script wait until the html parshing to be finish execution. It executes in order.
 
 Chapter 02 - Assignment 
 
