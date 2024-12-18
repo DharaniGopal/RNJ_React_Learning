@@ -1,1 +1,36 @@
+{
+  "name": "nj-learning",
+  "version": "1.0.0",
+  "description": "It is dharani learning of whole react.js",
+  "scripts": {
+    "test": "jest",
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DharaniGopal/RNJ_React_Learning.git"
+  },
+  "keywords": [
+    "React",
+    "Learning"
+  ],
+  "author": "Dharani",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DharaniGopal/RNJ_React_Learning/issues"
+  },
+  "homepage": "https://github.com/DharaniGopal/RNJ_React_Learning#readme",
+  "devDependencies": {
+    "parcel": "^2.13.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "browserslist": [
+    "last 2 version"
+  ]
+}
 
