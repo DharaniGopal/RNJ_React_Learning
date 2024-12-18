@@ -19,11 +19,11 @@ Ans: React is just a 'React', `It react to the changes in state.
 	Ans:It helps the application to interact with the resources in different domains.
  
 ● What is diference between React and ReactDOM 
-	Ans:React - 
-	ReactDOM - ReactDOM helps in manipulating the project
+	Ans:React - React works on the Elements side.
+	ReactDOM - ReactDOM helps in manipulating the project using DOM tree.
  
 ● What is the difference between react.development.js and react.production.js files via CDN? 
-Ans:
+Ans: react.development.js - It is used for delevopment purpose not in production and react.production.js - used in production purpose
 
 ● What is async and defer? - see my Youtube video ;) Coding 
 Ans:
@@ -75,7 +75,8 @@ Ans:Tree Shaking -It is one of the advantages of parcel. It is used to eliminate
 	Package-lock.json - contains the exact updated version of all dependencies.
  
 ● - Why should I not modify `package-lock.json`? 
-Ans:
+	Ans: It automatically updates the version. If there ia any changes made manually, 
+ then the application get conficated while running.
 
 ● - What is `node_modules` ? Is it a good idea to push that on git? 
 	Ans:No, node_modules can be regenerated in both local and production ready applications.
