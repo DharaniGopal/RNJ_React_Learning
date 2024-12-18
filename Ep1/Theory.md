@@ -59,11 +59,11 @@ Ans:Tree Shaking -It is one of the advantages of parcel. It is used to eliminate
 	Ans:HMR- It is used to update the changes in the project without refreshing the page in domains like chrome. Parcel uses parcel-cache to execute this.
  
 ● - List down your favourite 5 superpowers of Parcel and describe any 3 of them in your own words. 
-	Ans:Image optimization - Parcel is used in images to execute in project
-	Minifing - minimising the size of the application for faster execution
-	Compresing - compressing the files to make it lite weighted.
-	Bunduling 
-	https
+	Ans:Image optimization - Parcel is used in images to execute in project,
+	Minifing - minimising the size of the application for faster execution,
+	Compresing - compressing the files to make it lite weighted,
+	Bunduling ,
+	https.
  
 ● - What is `.gitignore`? What should we add and not add into it? 
 	Ans:It is a file used to add the file names. Which are not needed to push into the git repository.
