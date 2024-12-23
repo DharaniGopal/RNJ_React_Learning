@@ -1,7 +1,7 @@
 Chapter 03 - Laying the Foundation
 Assignment
 ● What is JSX? Ans: JSX is a Javascript XML. It is build by facebook to use in react.js development to make the code more readable because it looks alike HTML.
-● Superpowers of JSX - Ans: 1. Can write Javascript inside it using {} hfjdwhfekjdfek <br/>
+● Superpowers of JSX - Ans: 1. Can write Javascript inside it using {} hfjdwhfekjdfek <br/>  dhcbdejcndejc
 
 ● Role of type attribute in script tag? What options can I use there?
 ● {TitleComponent} vs {<TitleComponent/>} vs
