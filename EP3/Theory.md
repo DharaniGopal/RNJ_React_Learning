@@ -24,38 +24,38 @@ Ans: const headingreact = React.createElement(
   ("h1", {}, ("h2", {}, ("h3", {}, "test")))
 );
 
-const headingjsx = ( <br/>
-  <div className="test"> <br/>
-    <h1> <br/>
-      <h2> <br/>
-        <h3>test</h3> <br/>
-      </h2> <br/>
-    </h1> <br/>
-  </div> <br/>
-); <br/><br/>
+const headingjsx = ( 
+  <div className="test">
+    <h1>
+      <h2>
+        <h3>test</h3>
+      </h2>
+    </h1>
+  </div>
+);
 
-const Headingcomponentjsx = () => {<br/>
-  return (<br/>
-    <div className="test"><br/>
-      <h1 id="test1"><br/>
-        <h2><br/>
-          <h3>This is Headingcomponentjsx</h3><br/>
-        </h2><br/>
-      </h1><br/>
-    </div><br/>
-  );<br/>
-};<br/>
+const Headingcomponentjsx = () => {
+  return (
+    <div className="test">
+      <h1 id="test1">
+        <h2>
+          <h3>This is Headingcomponentjsx</h3>
+        </h2>
+      </h1>
+    </div>
+  );
+};
 
-const Headingcomponentjsx1 = () => {<br/>
-  return (<br/>
-    <div className="test"><br/>
-      <Headingcomponentjsx /><br/>
-      <Headingcomponentjsx></Headingcomponentjsx><br/>
-      {Headingcomponentjsx}<br/>
-      <h1 id="test1">This is Headingcomponentjsx1</h1><br/>
-    </div><br/>
-  );<br/>
-};<br/><br/>
+const Headingcomponentjsx1 = () => {
+  return (
+    <div className="test">
+      <Headingcomponentjsx />
+      <Headingcomponentjsx></Headingcomponentjsx>
+      {Headingcomponentjsx}
+      <h1 id="test1">This is Headingcomponentjsx1</h1>
+    </div>
+  );
+};
 
 const Root = ReactDOM.createRoot(document.getElementById("root"));<br/>
 Root.render(<Headingcomponentjsx1 />);<br/>
