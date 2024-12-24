@@ -18,11 +18,11 @@ div with class “title”)
 ○ {TitleComponent} vs {<TitleComponent/>} vs
 {<TitleComponent></TitleComponent>} in JSX <br/>
 
-Ans: const headingreact = React.createElement( <br/>
-  "div", <br/>
-  { class: "test" }, <br/>
-  ("h1", {}, ("h2", {}, ("h3", {}, "test"))) <br/>
-); <br/><br/>
+Ans: const headingreact = React.createElement(
+  "div", 
+  { class: "test" },
+  ("h1", {}, ("h2", {}, ("h3", {}, "test")))
+);
 
 const headingjsx = ( <br/>
   <div className="test"> <br/>
