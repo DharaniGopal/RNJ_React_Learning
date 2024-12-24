@@ -16,7 +16,50 @@ div with class “title”)
 ○ Pass attributes into the tag in JSX
 ○ Composition of Component(Add a component inside another)
 ○ {TitleComponent} vs {<TitleComponent/>} vs
-{<TitleComponent></TitleComponent>} in JSX
+{<TitleComponent></TitleComponent>} in JSX <br/>
+
+Ans: const headingreact = React.createElement( <br/>
+  "div", <br/>
+  { class: "test" }, <br/>
+  ("h1", {}, ("h2", {}, ("h3", {}, "test"))) <br/>
+); <br/><br/>
+
+const headingjsx = ( <br/>
+  <div className="test"> <br/>
+    <h1> <br/>
+      <h2> <br/>
+        <h3>test</h3> <br/>
+      </h2> <br/>
+    </h1> <br/>
+  </div> <br/>
+); <br/><br/>
+
+const Headingcomponentjsx = () => {<br/>
+  return (<br/>
+    <div className="test"><br/>
+      <h1 id="test1"><br/>
+        <h2><br/>
+          <h3>This is Headingcomponentjsx</h3><br/>
+        </h2><br/>
+      </h1><br/>
+    </div><br/>
+  );<br/>
+};<br/>
+
+const Headingcomponentjsx1 = () => {<br/>
+  return (<br/>
+    <div className="test"><br/>
+      <Headingcomponentjsx /><br/>
+      <Headingcomponentjsx></Headingcomponentjsx><br/>
+      {Headingcomponentjsx}<br/>
+      <h1 id="test1">This is Headingcomponentjsx1</h1><br/>
+    </div><br/>
+  );<br/>
+};<br/><br/>
+
+const Root = ReactDOM.createRoot(document.getElementById("root"));<br/>
+Root.render(<Headingcomponentjsx1 />);<br/>
+
 
 ● Create a Header Component from scratch using Functional Components with
 JSX
