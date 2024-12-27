@@ -1,4 +1,4 @@
-Chapter 04 - Talk is cheap, show me the code!
+Chapter 04 - Talk is cheap, show me the code! <br/>
 ● Is JSX mandatory for React? <br/>
 Ans: No, JSX is not mandotary but it is recommanded to use jsx because it is the best practice to make the code more readable. React can itself run with combaining javascript but jsx makes i easier to understand more easier.
 ● Is ES6 mandatory for React? <br/>
