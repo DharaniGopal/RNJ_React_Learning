@@ -22,5 +22,5 @@ return a.length == 0 ? <h1> Welcome </h1> : <h1> Hi </h1>; <br/>
 Ans: <br/>
 10. What is async and await? <br/>
 Ans: <br/>
-● What is the use of `const json = await data.json();` in getRestaurants() <br/>
+11. What is the use of `const json = await data.json();` in getRestaurants() <br/>
 Ans: <br/>
