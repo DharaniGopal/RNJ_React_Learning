@@ -12,7 +12,7 @@ Ans: Optional Chaining is used in json path. It is used to simlify the deeply ne
 6. What is Shimmer UI?<br/>
 Ans: It is used to view before the data get fetched throw Api. It is also called skeleton of the project. <br/>
 7. What is the difference between JS expression and JS statement<br/>
-Ans: <br/>
+Ans: Js Expression  - returns value , Statement - not always. Experssion - used as an assignment, statement - no .<br/>
 8. What is Conditional Rendering, explain with a code example<br/>
 Ans: It is called executing the code based on the condition.
 Code:
@@ -23,4 +23,4 @@ Ans: <br/>
 10. What is async and await? <br/>
 Ans: <br/>
 11. What is the use of `const json = await data.json();` in getRestaurants() <br/>
-Ans: <br/>
+Ans: This code is used to convert the restarent data from the API call into json method to use in cards.<br/>
