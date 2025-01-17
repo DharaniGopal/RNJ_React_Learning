@@ -12,7 +12,7 @@ Ans: There are several way to add image into and application
    Ans: useEffect without [] - execute every time when the component get rendered.
    useEffect with empty [] - run only one on the initial state of component renders.
    useEffect with a variable in [] - [count] - runs only when the state of the variable get changed.
-6. What is SPA?  Ans: Single Page Application - It a application that is dynamic accourding to the user intraction, without reloading the entire page.
-7. What is difference between Client Side Routing and Server Side Routing?
+4. What is SPA?  Ans: Single Page Application - It a application that is dynamic accourding to the user intraction, without reloading the entire page.
+5. What is difference between Client Side Routing and Server Side Routing?
    Ans: Server Side Routing - Whenever the URL or Link get hit the request send to the server and a new page is loaded from the server.
    Client Side Routing - An single page load's initially, then the javascript runs in the background of the page get the page when the link get hit, without reloading it.
