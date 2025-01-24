@@ -21,6 +21,6 @@ return a.length == 0 ? <h1> Welcome </h1> : <h1> Hi </h1>; <br/>
 9. What is CORS?<br/>
 Ans: CORS - Cross Origin Resourse Sharing. - It occurs when a application make ajax call of the server outside, due to security perpose it wont work. To solve this we use CORS.<br/>
 10. What is async and await? <br/>
-Ans: <br/>
+Ans: It is a feature in javascript, to make the asynchronous code more readable, easier and cleaner. It work with promises to make the asynchronous code work and behave like a synchronous code.<br/>
 11. What is the use of `const json = await data.json();` in getRestaurants() <br/>
 Ans: This code is used to convert the restarent data from the API call into json method to use in cards.<br/>
