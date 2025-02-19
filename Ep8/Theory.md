@@ -30,10 +30,10 @@ Theory:
    3. componentDidMount - It is used to work with api calls and DOM Manuplations
    4. componentDidUpdate - After the dummy data is replaced wit the actuall API data it will execute.
    5. componentWillUnmount - It is used to teriminate the process when the component is not called.
-● Why do we use componentDidMount?
+5. Why do we use componentDidMount?
 Ans: ComponentDidMount is called imediately when the component get into the browser, It is used to work on the importent part to run.
      Mostely it is used to fectch the data and in DOM Manuplation
-● Why do we use componentWillUnmount? Show with example
+6. Why do we use componentWillUnmount? Show with example
 Ans: It is used to terimanate the process in current component is running when the user moves to another component.
 Ex: If the setInterval is running, without closing it if we move to another component , the interval get run twice and it affect the performance of the project,
     to clear this we use componentWillUnmount because it called when the component get closed.
