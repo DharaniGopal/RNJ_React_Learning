@@ -37,10 +37,10 @@ Ans: ComponentDidMount is called imediately when the component get into the brow
 Ans: It is used to terimanate the process in current component is running when the user moves to another component.
 Ex: If the setInterval is running, without closing it if we move to another component , the interval get run twice and it affect the performance of the project,
     to clear this we use componentWillUnmount because it called when the component get closed.
-● Why do we use super(props) in constructor?
+7. Why do we use super(props) in constructor?
 Ans : By using the super in the constructor we can get all the properties and methods from the parent class.
      It is necessary to use super in the constructor to properly inherit all the features from the parent.
-● Why can't we have the callback function of useEffect async?
+8. Why can't we have the callback function of useEffect async?
 Ans : UseEffect normally return the cleanUp or nothing. If we use call back function like async in useEffect it return promises.
       where react get confused and because it return promises. UseEffect cannot cleanup using promises.
       It also can cause memory leak if the cleanUp function dosen't work correctly.
