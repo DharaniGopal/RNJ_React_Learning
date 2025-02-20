@@ -1,24 +1,11 @@
-import { useEffect, useState } from "react";
 import SimmerUi from "./SimmerUi";
-import { RES_INFO } from "../utils/contants";
 import { useParams } from "react-router";
+import useRestarentMenu from "../utils/useRestarentMenu";
 
 const RestaurentMenu = () => {
-  const [resInfo, setResInfo] = useState(null);
-
   const { resId } = useParams();
 
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const fetchData = async () => {
-    const data = await fetch(RES_INFO + resId);
-
-    const json = await data.json();
-
-    setResInfo(json.data);
-  };
+  const resInfo = useRestarentMenu(resId);
 
   if (resInfo === null) return <SimmerUi />;
 

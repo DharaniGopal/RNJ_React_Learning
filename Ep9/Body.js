@@ -1,17 +1,32 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { RESTARENTS } from "../utils/contants";
 import { Link } from "react-router";
 
 // import resList from "../utils/mocData";
 import RestarentContainer from "./RestarentContainer";
 import SimmerUi from "./SimmerUi";
 import useOnlineStatus from "../utils/useOnlineStatus";
-import useListOfRestarent from "../utils/useListOfRestarent";
 
 let Body = () => {
-  const { listOfRestarent, filteredListOfRes, setFilteredListOfRes } =
-    useListOfRestarent();
+  const [listOfRestarent, setListOfRestarent] = useState([]);
+  const [filteredListOfRes, setFilteredListOfRes] = useState([]);
 
   const [searchRes, setSearchRes] = useState("");
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch(RESTARENTS);
+
+    const json = await data.json();
+
+    const restarents = json.data?.cards?.filter((res) => res?.card?.card?.info);
+
+    setListOfRestarent(restarents);
+    setFilteredListOfRes(restarents);
+  };
 
   const onlineStatus = useOnlineStatus();
 
