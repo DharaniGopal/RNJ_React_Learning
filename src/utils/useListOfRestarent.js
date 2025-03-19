@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { RESTARENTS } from "../utils/contants";
+import { RESTARENTS } from "./contants";
 
 const useListOfRestarent = () => {
   const [listOfRestarent, setListOfRestarent] = useState([]);
