@@ -6,26 +6,40 @@ const RestarentContainer = ({ resData }) => {
   const { deliveryTime } = resData?.card.card.info.sla;
   return (
     // <div className="res-container">
-    <div className="m-3.5 w-[220px] bg-gray-200 rounded-lg hover:bg-gray-300">
+    <div className="m-3.5 w-[250px] h-80 rounded-lg hover:p-0.5">
       <img
         src={CDN_URL + cloudinaryImageId}
         alt="csrd-img"
-        className=" w-60 h-40 rounded-t-lg"
+        className=" w-[350px] h-40 rounded-xl"
       />
       <div className="p-2">
-        <div className="flex justify-between">
-          <h3 className="w-53 font-bold py-1 text-lg">{name}</h3>
-          <h4 className="w-16 py-1">{avgRating}🟢</h4>
-        </div>
-        <div className="flex justify-between">
-          <h4 className="w-53 py-1">{costForTwo}</h4>
+        <h3 className="font-bold py-1 text-lg">{name}</h3>
+        <div className="flex">
+          <h4 className="w-16 py-1">⭐{avgRating}</h4>
           <h4 className="w-20 py-1">{deliveryTime} mins</h4>
         </div>
+        <h4 className="py-1">{costForTwo}</h4>
         <h4 className="py-1">{cuisines.join(", ")}</h4>
       </div>
     </div>
     // </div>
   );
+};
+
+export const withPromotedRestarent = (RestarentContainer) => {
+  return (props) => {
+    const { resData } = props;
+    const { header, subHeader } =
+      resData?.card.card.info?.aggregatedDiscountInfoV3;
+    return (
+      <div>
+        <label className=" px-4 m-1 absolute bg-auto text-white font-semibold">
+          {header} {subHeader}
+        </label>
+        <RestarentContainer {...props} />
+      </div>
+    );
+  };
 };
 
 export default RestarentContainer;

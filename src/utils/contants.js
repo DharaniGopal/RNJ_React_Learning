@@ -3,6 +3,6 @@ export const CDN_URL =
 
 export const RESTARENTS = // https://corsproxy.io/? --> cors proxy fixer (but not working)
   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0843007&lng=80.2704622&collection=142465&tags=&sortBy=&filters=&type=rcv2&offset=0&page_type=null";
-
+// "https://www.swiggy.com/dapi/restaurants/list/v5?lat=13.0843007&lng=80.2704622&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 export const RES_INFO =
   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0843007&lng=80.2704622&restaurantId=";

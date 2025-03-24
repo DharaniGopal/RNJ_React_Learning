@@ -16,6 +16,13 @@ const useListOfRestarent = () => {
 
     const restarents = json.data?.cards?.filter((res) => res?.card?.card?.info);
 
+    // const restarents =
+    //   json?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants?.map(
+    //     (restaurant) => restaurant.info
+    //   );
+
+    // console.log(json?.data?.cards);
+
     setListOfRestarent(restarents);
     setFilteredListOfRes(restarents);
   };

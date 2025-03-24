@@ -4,32 +4,37 @@ import { Link } from "react-router";
 import useOnlineStatus from "../utils/useOnlineStatus";
 
 const Header = () => {
-  const [loginBtn, setLoginBtn] = useState("Login");
+  const [loginBtn, setLoginBtn] = useState("Sign In");
   const onlineStatus = useOnlineStatus();
   return (
-    <div className="flex justify-between bg-amber-300 shadow-lg m-2 sm:bg-yellow-200 lg:bg-gray-300">
-      <div>
+    <div className="flex justify-between bg-amber-300 shadow-lg m-2 sm:bg-yellow-200 lg:bg-white">
+      <div className="flex items-center">
         <img className="w-24" alt="logo-img" src={Logo} />
+        <input
+          className=" h-7 w-75 p-4 m-4 border border-none rounded-lg hover:bg-gray-100"
+          placeholder="Your Location"
+        />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
-          <li className="px-4">
-            <Link to="/">Home</Link>
+          <li className="px-4 font-semibold hover:text-amber-600">
+            <Link to="/">Ghee</Link>
           </li>
-          <li className="px-4">
-            <Link to="/about">About us</Link>
+          <li className="px-4 font-semibold hover:text-amber-600">
+            {/* <Link to="/about">About us</Link> */}
+            <Link to="/about">Search</Link>
           </li>
-          <li className="px-4">
-            <Link to="/contact">Contact</Link>
+          <li className="px-4 font-semibold hover:text-amber-600">
+            {/* <Link to="/contact">Contact</Link> */}
+            <Link to="/contact">Offers</Link>
           </li>
-          <li className="px-4">Cart</li>
-          <li className="px-4">
+          <li className="px-4 font-semibold hover:text-amber-600">Help</li>
+          <li className="px-4 font-semibold hover:text-amber-600">
             <Link to="/grocery">Grocery</Link>
           </li>
           <li className="px-4">{onlineStatus ? "🟢" : "🔴"}</li>
-          <li className="px-4">
+          <li className="px-4 font-semibold hover:text-amber-600">
             <button
-              className="login-button"
               onClick={() => {
                 loginBtn == "Login"
                   ? setLoginBtn("Logout")

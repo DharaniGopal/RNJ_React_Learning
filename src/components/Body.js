@@ -2,7 +2,10 @@ import { useState } from "react";
 import { Link } from "react-router";
 
 // import resList from "../utils/mocData";
-import RestarentContainer from "./RestarentContainer";
+import RestarentContainer, {
+  withPromotedRestarent,
+} from "./RestarentContainer";
+// import RestarentContainer from "./RestarentContainer";
 import SimmerUi from "./SimmerUi";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useListOfRestarent from "../utils/useListOfRestarent";
@@ -15,14 +18,16 @@ let Body = () => {
 
   const onlineStatus = useOnlineStatus();
 
+  const RestarentCardPromoted = withPromotedRestarent(RestarentContainer);
+
   if (onlineStatus === false)
     return <h1>You are Offline; Please check the internet connection</h1>;
 
   return listOfRestarent.length === 0 ? (
     <SimmerUi />
   ) : (
-    <div className="body">
-      <div className="flex justify-between">
+    <div className="bg-gray-50">
+      <div className="mx-5 px-6 flex justify-between">
         <div className="search m-4 p-4">
           <input
             alt="search-bar"
@@ -66,13 +71,23 @@ let Body = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap">
+      <div className="mx-13 px-2">
+        <hr className="border border-solid border-gray-300" />
+        <h1 className="p-4 font-bold text-2xl">
+          Restaurants with online food delivery
+        </h1>
+      </div>
+      <div className="flex flex-wrap mx-9 px-6">
         {filteredListOfRes.map((restaurant) => (
           <Link
             key={restaurant.card.card.info.id}
             to={/resInfo/ + restaurant.card.card.info.id}
           >
-            <RestarentContainer resData={restaurant} />
+            {restaurant.card.card.info?.aggregatedDiscountInfoV3 ? (
+              <RestarentCardPromoted resData={restaurant} />
+            ) : (
+              <RestarentContainer resData={restaurant} />
+            )}
           </Link>
         ))}
       </div>
