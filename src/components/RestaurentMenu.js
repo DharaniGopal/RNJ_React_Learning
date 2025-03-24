@@ -2,11 +2,14 @@ import SimmerUi from "./SimmerUi";
 import { useParams } from "react-router";
 import useRestarentMenu from "../utils/useRestarentMenu";
 import RestaurentCategory from "./RestaurentCategory";
+import { useState } from "react";
 
 const RestaurentMenu = () => {
   const { resId } = useParams();
 
   const resInfo = useRestarentMenu(resId);
+
+  const [showIndex, setShowIndex] = useState(0);
 
   if (resInfo === null) return <SimmerUi />;
 
@@ -52,10 +55,15 @@ const RestaurentMenu = () => {
         </h2>
       </div>
       <div>
-        {categories.map((category) => (
+        {categories.map((category, index) => (
           <RestaurentCategory
             key={category?.card?.card.title}
             data={category?.card?.card}
+            showItem={index === showIndex ? true : false}
+            // setShowIndex={() => setShowIndex(index)}
+            setShowIndex={() =>
+              setShowIndex((prevIndex) => (prevIndex === index ? null : index))
+            }
           />
         ))}
       </div>

@@ -1,9 +1,14 @@
 import { CDN_URL } from "../utils/contants";
+import { useContext } from "react";
+import UserContext from "../utils/userContext";
 
 const RestarentContainer = ({ resData }) => {
   const { name, avgRating, costForTwo, cuisines, cloudinaryImageId } =
     resData?.card.card.info;
   const { deliveryTime } = resData?.card.card.info.sla;
+
+  const { loggedInUser } = useContext(UserContext);
+
   return (
     // <div className="res-container">
     <div className="m-3.5 w-[250px] h-80 rounded-lg hover:p-0.5">
@@ -20,6 +25,7 @@ const RestarentContainer = ({ resData }) => {
         </div>
         <h4 className="py-1">{costForTwo}</h4>
         <h4 className="py-1">{cuisines.join(", ")}</h4>
+        <h4>{loggedInUser}</h4>
       </div>
     </div>
     // </div>

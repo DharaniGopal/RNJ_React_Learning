@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router";
 
 // import resList from "../utils/mocData";
@@ -9,6 +9,7 @@ import RestarentContainer, {
 import SimmerUi from "./SimmerUi";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import useListOfRestarent from "../utils/useListOfRestarent";
+import userContext from "../utils/userContext";
 
 let Body = () => {
   const { listOfRestarent, filteredListOfRes, setFilteredListOfRes } =
@@ -19,6 +20,8 @@ let Body = () => {
   const onlineStatus = useOnlineStatus();
 
   const RestarentCardPromoted = withPromotedRestarent(RestarentContainer);
+
+  const { loggedInUser, setUserName } = useContext(userContext);
 
   if (onlineStatus === false)
     return <h1>You are Offline; Please check the internet connection</h1>;
@@ -68,6 +71,16 @@ let Body = () => {
             >
               Top Rated Restarents
             </button>
+          </div>
+          <div className="m-4 px-4 py-1 rounded-sm">
+            <label>UserName: </label>
+            <input
+              className="p-1 border border-black rounded-sm"
+              // value={loggedInUser}
+              onChange={(e) => {
+                setUserName(e.target.value);
+              }}
+            ></input>
           </div>
         </div>
       </div>

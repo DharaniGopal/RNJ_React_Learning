@@ -1,11 +1,12 @@
-import { useState } from "react";
+// import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurentCategory = ({ data }) => {
-  const [showItem, setShowItem] = useState(false);
+const RestaurentCategory = ({ data, showItem, setShowIndex }) => {
+  // const [showItem, setShowItem] = useState(false);
 
   const handleClick = () => {
-    setShowItem(!showItem);
+    // setShowIndex();
+    setShowIndex((prevIndex) => (prevIndex === data.title ? null : data.title));
   };
 
   return (
@@ -15,7 +16,7 @@ const RestaurentCategory = ({ data }) => {
           <span className="font-bold text-lg">
             {data.title}({data.itemCards.length})
           </span>
-          <span>🔽</span>
+          <span>{showItem ? "🔼" : "🔽"}</span>
         </div>
         <div>{showItem && <ItemList items={data.itemCards} />}</div>
       </div>
