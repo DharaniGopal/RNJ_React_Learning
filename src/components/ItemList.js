@@ -1,7 +1,19 @@
 import { CDN_URL } from "../utils/contants";
+import { useDispatch } from "react-redux";
+import { addItem, removeItem } from "../Redux/cartSlice";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, showAddButton }) => {
   console.log(items);
+  const dispatch = useDispatch();
+
+  const handelAddItem = (items) => {
+    dispatch(addItem(items));
+  };
+
+  const handelRemoveItem = (items) => {
+    dispatch(removeItem(items.card.info.id));
+  };
+
   return (
     <div>
       {items.map((item) => (
@@ -31,9 +43,21 @@ const ItemList = ({ items }) => {
               src={CDN_URL + item.card.info.imageId}
             />
             <div className="absolute bottom-0.5 left-1/2 transform -translate-x-1/2">
-              <button className="px-10 py-2 rounded-lg shadow-lg bg-white text-emerald-600 font-bold">
-                ADD
-              </button>
+              {showAddButton ? (
+                <button
+                  className="px-10 py-2 rounded-lg shadow-lg bg-white text-emerald-600 font-bold"
+                  onClick={() => handelAddItem(item)}
+                >
+                  ADD
+                </button>
+              ) : (
+                <button
+                  className="px-10 py-2 rounded-lg shadow-lg bg-white text-emerald-600 font-bold"
+                  onClick={() => handelRemoveItem(item)}
+                >
+                  REMOVE
+                </button>
+              )}
             </div>
           </div>
         </div>

@@ -18,7 +18,9 @@ const RestaurentCategory = ({ data, showItem, setShowIndex }) => {
           </span>
           <span>{showItem ? "🔼" : "🔽"}</span>
         </div>
-        <div>{showItem && <ItemList items={data.itemCards} />}</div>
+        <div>
+          {showItem && <ItemList items={data.itemCards} showAddButton={true} />}
+        </div>
       </div>
     </div>
   );

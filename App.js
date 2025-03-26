@@ -11,6 +11,9 @@ import Error from "./src/components/Error";
 import RestaurentMenu from "./src/components/RestaurentMenu";
 // import Grocery from "./src/components/Grocery";
 import userContext from "./src/utils/userContext";
+import { Provider } from "react-redux";
+import appStore from "./src/Redux/appStore";
+import Cart from "./src/components/Cart";
 
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router";
 
@@ -25,12 +28,14 @@ const AppLayOut = () => {
   }, []);
 
   return (
-    <userContext.Provider value={{ loggedInUser: userName, setUserName }}>
-      <div className="appLayout">
-        <Header />
-        <Outlet />
-      </div>
-    </userContext.Provider>
+    <Provider store={appStore}>
+      <userContext.Provider value={{ loggedInUser: userName, setUserName }}>
+        <div className="appLayout">
+          <Header />
+          <Outlet />
+        </div>
+      </userContext.Provider>
+    </Provider>
   );
 };
 
@@ -69,6 +74,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/resInfo/:resId", // ( /: ) means dynamic path.
         element: <RestaurentMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
       {
         path: "/grocery",
